@@ -1,3 +1,4 @@
+
 ### EDUCATION REQUESTS ###
 
 ### INDEX
@@ -6,7 +7,7 @@ Content-Type: application/json
 
 
 ### SHOW
-GET http://localhost:3000/education/1
+GET http://localhost:3000/education/show/1
 Content-Type: application/json
 
 ### CREATE
@@ -34,3 +35,154 @@ Content-Type: application/json
 
 ### DELETE
 DELETE http://localhost:3000/education/1
+
+
+### CAPSTONES - INDEX
+GET http://localhost:3000/capstones/1
+Content-Type: application/json
+### CAPSTONES - SHOW
+GET http://localhost:3000/capstones/show/1
+Content-Type: application/json
+### CAPSTONES - CREATE
+POST http://localhost:3000/capstones
+Content-Type: application/json
+
+{
+  "student_id": 1,
+  "name": "Test",
+  "description": "Test",
+  "URL": "Test",
+  "screenshot": "Test"
+}
+
+### CAPSTONES - UPDATE
+PATCH http://localhost:3000/capstones/1
+Content-Type: application/json
+
+{
+  "name": "Test 2"
+}
+### CAPSTONES - DESTROY
+DELETE http://localhost:3000/capstones/1
+Content-Type: application/json
+
+
+### Students Index
+GET http://localhost:3000/students
+Content-Type: application/json
+
+### Students Create
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Show
+GET http://localhost:3000/students/1
+Content-Type: application/json
+
+### Students Update
+PATCH http://localhost:3000/students/1
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Destroy
+DELETE http://localhost:3000/students/1
+Content-Type: application/json
+
+
+# Skill Model Requests
+### INDEX REQUEST
+GET http://localhost:3000/skills/2.json
+Content-Type: application/json 
+
+### SHOW REQUEST
+GET http://localhost:3000/skills/show/4.json
+Content-Type: application/json 
+
+### CREATE REQUEST
+POST http://localhost:3000/skills.json
+Content-Type: application/json 
+
+{
+  "student_id": 1,
+  "skill": "Driving"
+}
+
+### EDIT REQUEST
+PATCH http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+{
+  "skill": "Drifting"
+}
+
+### DESTROY REQUEST
+DELETE http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+###index experiences
+
+GET http://localhost:3000/experiences/1
+Content-Type: application/json
+
+###show experiences
+
+GET http://localhost:3000/experience/1
+Content-Type: application/json
+
+###create experiences
+
+POST http://localhost:3000/experiences/create
+Content-Type: application/json
+
+{
+  "student_id": "",
+  "start_date": "",
+  "end_date": "",
+  "job_title": "",
+  "company_name": "",
+  "details": ""
+}
+
+###update experience
+
+POST http://localhost:3000/experiences/update/1
+Content-Type: application/json
+
+{
+  "start_date": "now",
+  "end_date": "now",
+  "job_title": "now",
+  "company_name": "now",
+  "details": "now"
+}
+
+###delete experience
+DELETE http://localhost:3000/experiences/delete/2
+
