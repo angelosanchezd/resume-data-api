@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+=======
   # Students Routes
   get "/students" => "students#index"
 
@@ -19,5 +21,10 @@ end
   post "/skills" => "skills#create"
   patch "/skills/:id" => "skills#update"
   delete "/skills/:id" => "skills#destroy"
+  get "/experiences/:student_id" => "experiences#index"
+  get "/experience/:id" => "experiences#show"
+  post "experiences/create" => "experiences#create"
+  post "experiences/update/:id" => "experiences#update"
+  delete "experiences/delete/:id" => "experiences#delete"
 end
 

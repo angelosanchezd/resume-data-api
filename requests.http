@@ -1,4 +1,5 @@
 
+
 ### Students Index
 GET http://localhost:3000/students
 Content-Type: application/json
@@ -77,5 +78,45 @@ Content-Type: application/json
 ### DESTROY REQUEST
 DELETE http://localhost:3000/skills/7.json
 Content-Type: application/json 
+
+###index experiences
+
+GET http://localhost:3000/experiences/1
+Content-Type: application/json
+
+###show experiences
+
+GET http://localhost:3000/experience/1
+Content-Type: application/json
+
+###create experiences
+
+POST http://localhost:3000/experiences/create
+Content-Type: application/json
+
+{
+  "student_id": "",
+  "start_date": "",
+  "end_date": "",
+  "job_title": "",
+  "company_name": "",
+  "details": ""
+}
+
+###update experience
+
+POST http://localhost:3000/experiences/update/1
+Content-Type: application/json
+
+{
+  "start_date": "now",
+  "end_date": "now",
+  "job_title": "now",
+  "company_name": "now",
+  "details": "now"
+}
+
+###delete experience
+DELETE http://localhost:3000/experiences/delete/2
 
 
