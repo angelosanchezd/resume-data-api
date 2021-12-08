@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   def index
     student = Student.all
-    render json: student.as_json
+    render json: student
   end
 
   def create
@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
       photo: params[:photo]
     )
     if student.save
-      render json: student.as_json
+      render json: student
     else
       render json: {errors: student.errors.full_messages}, status: 422
     end
@@ -40,7 +40,7 @@ class StudentsController < ApplicationController
     student.photo = params[:photo] || student.photo
 
     if student.save
-      render json: student.as_json
+      render json: student
     else
       render json: {errors: student.errors.full_messages}, status: 422
     end
@@ -48,7 +48,7 @@ class StudentsController < ApplicationController
 
   def show
     student = Student.find_by(id: params[:id])
-    render json: student.as_json
+    render json: student
   end
 
   def destroy

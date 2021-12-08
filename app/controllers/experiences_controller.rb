@@ -1,17 +1,17 @@
 class ExperiencesController < ApplicationController
 
   def index
-    render json: Experience.where(student_id: params[:student_id])
+    render json: Experience.where(student_id: params[:student_id]).as_json
   end
 
   def show
-    render json: Experience.find_by(params[:id])
+    render json: Experience.find_by(params[:id]).as_json
   end
 
   def create
     a = Experience.create(start_date: params[:start_date], end_date: params[:end_date], job_title: params[:job_title], company: params[:company_name], details: params[:details])
     if a.save
-      render json: a
+      render json: a.as_json
     else
       render json: { errors: post.errors.full_messages }, status: :bad_request
     end
@@ -23,7 +23,7 @@ class ExperiencesController < ApplicationController
     if a.destroy
       render json: {message: 'Done'}
     else
-      rrender json: { errors: post.errors.full_messages }, status: :bad_request
+      render json: { errors: post.errors.full_messages }, status: :bad_request
     end
   end
 
@@ -36,7 +36,7 @@ class ExperiencesController < ApplicationController
     x.company = params[:company_name]
     x.details = params[:details]
     if x.save
-      render json: x
+      render json: x.as_json
     else
       render json: { errors: post.errors.full_messages }, status: :bad_request
     end
