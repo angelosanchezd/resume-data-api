@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   def index
-    skills = Skill.where(id: params[:student_id])
+    skills = Skill.where(student_id: params[:student_id])
     render json: skills.as_json
   end
 
@@ -30,7 +30,7 @@ class SkillsController < ApplicationController
   end
 
   def destroy
-    skill = skill.find_by(id: params[:id])
+    skill = Skill.find_by(id: params[:id])
     if skill.delete
       render json: {message: "Skill Deleted"}
     else    
