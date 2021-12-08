@@ -1,0 +1,47 @@
+### Students Index
+GET http://localhost:3000/students
+Content-Type: application/json
+
+### Students Create
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Show
+GET http://localhost:3000/students/1
+Content-Type: application/json
+
+### Students Update
+PATCH http://localhost:3000/students/1
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Destroy
+DELETE http://localhost:3000/students/1
+Content-Type: application/json
