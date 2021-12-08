@@ -1,37 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-# Capstone.create!([
-#   {student_id: 1, name: "Test", description: "Test", URL: "test", screenshot: "test"},
-#   {student_id: 1, name: "Test2", description: "Test2", URL: "test", screenshot: "test"},
-#   {student_id: 1, name: "Test3", description: "Test3", URL: "test", screenshot: "test"}
+# Education.create!([
+#   {student_id: 1, start_date: "nov 2", end_date: "nov 3", degree: "degree", university_name: "university", details: "details"}
 # ])
 
-# Students Seeds
-# student = Student.new(
-# "first_name": "Ismail",
-# "last_name": "Nicholson",
-# "email": "mike@example.com",
-# "phone_number": "555-555-5555",
-# "short_bio": "I'm me.",
-# "linkedin": "mitchel@linkedin.net",
-# "twitter": "mitchel@twitter.net",
-# "website": "mitchel@example.gov",
-# "online_resume": "Work.pdf",
-# "github": "mike@github.net",
-# "photo": "me.jpg"
+# Student.create!(
+#   "first_name": "",
+#   "last_name": "",
+#   "email": "",
+#   "phone_number": "",
+#   "short_bio": "",
+#   "linkedin": "",
+#   "twitter": "",
+#   "website": "",
+#   "online_resume": "",
+#   "github": "",
+#   "photo": ""
 # )
-# student.save
 
-# Skills Seeds
-# Skill.create(student_id: 1, skill: "Writing")
-# Skill.create(student_id: 1, skill: "Reading")
-# Skill.create(student_id: 1, skill: "Math")
-# Skill.create(student_id: 2, skill: "Coding")
-# Skill.create(student_id: 2, skill: "Being Awesome")
-# Skill.create(student_id: 2, skill: "Gnarly RIFFS")
+# Skill.create!([
+#   {student_id: 1, skill: "Writing"},
+#   {student_id: 1, skill: "Reading"},
+#   {student_id: 1, skill: "Math"},
+#   {student_id: 2, skill: "Coding"},
+#   {student_id: 2, skill: "Being Awesome"},
+#   {student_id: 2, skill: "Gnarly RIFFS"}
+# ])
+

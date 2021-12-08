@@ -5,7 +5,7 @@ class EducationsController < ApplicationController
   end
 
   def show
-    education = Education.where(student_id: params["student_id"])
+    education = Education.find_by(id: params["id"])
     render json: education.as_json
   end
 
