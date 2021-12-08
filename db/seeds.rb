@@ -1,3 +1,4 @@
-Experience.create!([
-  {student_id: nil, start_date: "now", end_date: "now", job_title: "now", company: "now", details: "now"}
+
+Education.create!([
+  {student_id: 1, start_date: "nov 2", end_date: "nov 3", degree: "degree", university_name: "university", details: "details"}
 ])
