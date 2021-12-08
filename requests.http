@@ -1,0 +1,28 @@
+### CAPSTONES - INDEX
+GET http://localhost:3000/capstones/1
+Content-Type: application/json
+### CAPSTONES - SHOW
+GET http://localhost:3000/capstones/show/1
+Content-Type: application/json
+### CAPSTONES - CREATE
+POST http://localhost:3000/capstones
+Content-Type: application/json
+
+{
+  "student_id": 1,
+  "name": "Test",
+  "description": "Test",
+  "URL": "Test",
+  "screenshot": "Test"
+}
+
+### CAPSTONES - UPDATE
+PATCH http://localhost:3000/capstones/1
+Content-Type: application/json
+
+{
+  "name": "Test 2"
+}
+### CAPSTONES - DESTROY
+DELETE http://localhost:3000/capstones/1
+Content-Type: application/json

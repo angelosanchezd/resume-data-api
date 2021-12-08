@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/capstones/:student_id" => "capstones#index"
+  get "/capstones/show/:id" => "capstones#show"
+  post "/capstones" => "capstones#create"
+  patch "/capstones/:id" => "capstones#update"
+  delete "/capstones/:id" => "capstones#destroy"
 end
