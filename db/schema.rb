@@ -12,6 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2021_12_08_180212) do
 
+
+
+
+ActiveRecord::Schema.define(version: 2021_12_08_180134) do
+
+
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,8 +28,34 @@ ActiveRecord::Schema.define(version: 2021_12_08_180212) do
     t.string "description"
     t.string "URL"
     t.string "screenshot"
+
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "short_bio"
+    t.string "linkedin"
+    t.string "twitter"
+    t.string "website"
+    t.string "online_resume"
+    t.string "github"
+    t.string "photo"
+
+  create_table "skills", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "skill"
+
+  create_table "experiences", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "start_date"
+    t.string "end_date"
+    t.string "job_title"
+    t.string "company"
+    t.string "details"
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
 end
