@@ -1,3 +1,4 @@
+
 ### Students Index
 GET http://localhost:3000/students
 Content-Type: application/json
@@ -45,3 +46,36 @@ Content-Type: application/json
 ### Students Destroy
 DELETE http://localhost:3000/students/1
 Content-Type: application/json
+
+
+# Skill Model Requests
+### INDEX REQUEST
+GET http://localhost:3000/skills/2.json
+Content-Type: application/json 
+
+### SHOW REQUEST
+GET http://localhost:3000/skills/show/4.json
+Content-Type: application/json 
+
+### CREATE REQUEST
+POST http://localhost:3000/skills.json
+Content-Type: application/json 
+
+{
+  "student_id": 1,
+  "skill": "Driving"
+}
+
+### EDIT REQUEST
+PATCH http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+{
+  "skill": "Drifting"
+}
+
+### DESTROY REQUEST
+DELETE http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+
