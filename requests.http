@@ -24,7 +24,7 @@ Content-Type: application/json
 
 ###update experience
 
-POST http://localhost:3000/experiences/update/1
+PATCH http://localhost:3000/experiences/update/1
 Content-Type: application/json
 
 {
