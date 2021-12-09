@@ -1,6 +1,8 @@
 class CapstonesController < ApplicationController
+  before_action :authenticate_student
+
   def index
-    capstones = Capstone.where(student_id: params[:student_id])
+    capstones = Capstone.where(student_id: current_student.id)
     render json: capstones
   end
   def show
@@ -9,7 +11,7 @@ class CapstonesController < ApplicationController
   end
   def create 
     capstone = Capstone.new(
-      student_id: params[:student_id],
+      student_id: current_student.id,
       name: params[:name],
       description: params[:description],
       URL: params[:URL],
@@ -23,7 +25,6 @@ class CapstonesController < ApplicationController
   end
   def update
     capstone = Capstone.find_by(id: params[:id])
-    capstone.student_id = params[:student_id] || capstone.student_id
     capstone.name = params[:name] || capstone.name
     capstone.description = params[:description] || capstone.description
     capstone.URL = params[:URL] || capstone.URL

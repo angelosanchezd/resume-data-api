@@ -118,8 +118,9 @@ Content-Type: application/json
 
 # Skill Model Requests
 ### INDEX REQUEST
-GET http://localhost:3000/skills/2.json
+GET http://localhost:3000/skills/3.json
 Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjQ2MjF9.EfImtCVNnfUu00bZx3d3NrOwpgh0qhvyrpvkCFoK2Pk
 
 ### SHOW REQUEST
 GET http://localhost:3000/skills/show/4.json
@@ -185,4 +186,21 @@ Content-Type: application/json
 
 ###delete experience
 DELETE http://localhost:3000/experiences/delete/2
+
+# Sessions Test
+###
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.as_json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "1234"
+}
+
+
+
+
 

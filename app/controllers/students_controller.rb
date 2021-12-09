@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+  before_action :authenticate_student, except: [:create, :index, :show] 
+  
+
   def index
     student = Student.all
     render json: student
@@ -16,7 +19,9 @@ class StudentsController < ApplicationController
       website: params[:website],
       online_resume: params[:online_resume],
       github: params[:github],
-      photo: params[:photo]
+      photo: params[:photo],
+      password: params[:password]
+      password_confirmation: params[:password_confirmation]
     )
     if student.save
       render json: student
@@ -38,6 +43,7 @@ class StudentsController < ApplicationController
     student.online_resume = params[:online_resume] || student.online_resume
     student.github = params[:github] || student.github
     student.photo = params[:photo] || student.photo
+    
 
     if student.save
       render json: student

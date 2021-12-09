@@ -1,7 +1,8 @@
 class ExperiencesController < ApplicationController
+  before_action :authenticate_student
 
   def index
-    render json: Experience.where(student_id: params[:student_id]).as_json
+    render json: Experience.where(student_id: current_student.id).as_json
   end
 
   def show
@@ -9,7 +10,7 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    a = Experience.create(start_date: params[:start_date], end_date: params[:end_date], job_title: params[:job_title], company: params[:company_name], details: params[:details])
+    a = Experience.create(start_date: params[:start_date], end_date: params[:end_date], job_title: params[:job_title], company: params[:company_name], details: params[:details], student_id: current_student.id)
     if a.save
       render json: a.as_json
     else
@@ -35,6 +36,7 @@ class ExperiencesController < ApplicationController
     x.job_title = params[:job_title]
     x.company = params[:company_name]
     x.details = params[:details]
+    x.student_id = x.student_id
     if x.save
       render json: x.as_json
     else
