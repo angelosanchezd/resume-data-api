@@ -2,7 +2,7 @@ class SkillsController < ApplicationController
   before_action :authenticate_student
 
   def index
-    skills = Skill.where(student_id: params[:student_id])
+    skills = Skill.where(student_id: current_student.id)
     render json: skills.as_json
   end
 
@@ -12,7 +12,7 @@ class SkillsController < ApplicationController
   end
 
   def create
-    skill = Skill.new(student_id: params[:student_id], skill: params[:skill])
+    skill = Skill.new(student_id: current_student.id, skill: params[:skill])
     if skill.save
       render json: skill.as_json
     else 
