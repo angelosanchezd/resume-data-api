@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
       online_resume: params[:online_resume],
       github: params[:github],
       photo: params[:photo],
-      password: params[:password]
+      password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
     if student.save
