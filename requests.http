@@ -118,8 +118,9 @@ Content-Type: application/json
 
 # Skill Model Requests
 ### INDEX REQUEST
-GET http://localhost:3000/skills/2.json
+GET http://localhost:3000/skills/3.json
 Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjQ2MjF9.EfImtCVNnfUu00bZx3d3NrOwpgh0qhvyrpvkCFoK2Pk
 
 ### SHOW REQUEST
 GET http://localhost:3000/skills/show/4.json
@@ -196,21 +197,10 @@ Content-Type: application/json
 
 {
   "email": "test@test.com",
-  "password": "password"
+  "password": "1234"
 }
 
-# User Test
 
-### Users create (signup)
-POST http://localhost:3000/users
-Content-Type: application/json
-
-{
-  "name": "Test name",
-  "email": "test@test.com",
-  "password": "password",
-  "password_confirmation": "password"
-}
 
 
 

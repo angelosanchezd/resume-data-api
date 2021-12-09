@@ -1,5 +1,5 @@
 class EducationsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_student
 
   def index
     educations = Education.where(student_id: params["student_id"])

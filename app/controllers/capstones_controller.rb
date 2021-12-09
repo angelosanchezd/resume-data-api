@@ -1,5 +1,5 @@
 class CapstonesController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_student
 
   def index
     capstones = Capstone.where(student_id: params[:student_id])

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  def current_user
+  def current_student
     auth_headers = request.headers["Authorization"]
     if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
       token = auth_headers[/(?<=\A(Bearer ))\S+\z/]
@@ -10,15 +10,15 @@ class ApplicationController < ActionController::API
           true,
           { algorithm: "HS256" }
         )
-        User.find_by(id: decoded_token[0]["user_id"])
+        Student.find_by(id: decoded_token[0]["student_id"])
       rescue JWT::ExpiredSignature
         nil
       end
     end
   end
 
-  def authenticate_user
-    unless current_user
+  def authenticate_student
+    unless current_student
       render json: {}, status: :unauthorized
     end
   end

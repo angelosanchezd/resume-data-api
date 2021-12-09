@@ -1,5 +1,5 @@
 class ExperiencesController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_student
 
   def index
     render json: Experience.where(student_id: params[:student_id]).as_json
