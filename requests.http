@@ -46,9 +46,9 @@ Content-Type: application/json
 ### CAPSTONES - CREATE
 POST http://localhost:3000/capstones
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjY4MDB9.LQUyw32uhvmp1RamDHgAt5B53FRtP9GAgemf_nswq4I
 
 {
-  "student_id": 1,
   "name": "Test",
   "description": "Test",
   "URL": "Test",
@@ -58,9 +58,10 @@ Content-Type: application/json
 ### CAPSTONES - UPDATE
 PATCH http://localhost:3000/capstones/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjY4MDB9.LQUyw32uhvmp1RamDHgAt5B53FRtP9GAgemf_nswq4I
 
 {
-  "name": "Test 2"
+  "name": "wabbajack"
 }
 ### CAPSTONES - DESTROY
 DELETE http://localhost:3000/capstones/1
