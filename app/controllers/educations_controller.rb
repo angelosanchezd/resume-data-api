@@ -1,4 +1,6 @@
 class EducationsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     educations = Education.where(student_id: params["student_id"])
     render json: educations.as_json

@@ -1,4 +1,6 @@
 class SkillsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     skills = Skill.where(student_id: params[:student_id])
     render json: skills.as_json

@@ -1,4 +1,6 @@
 class CapstonesController < ApplicationController
+  before_action :authenticate_user
+
   def index
     capstones = Capstone.where(student_id: params[:student_id])
     render json: capstones
