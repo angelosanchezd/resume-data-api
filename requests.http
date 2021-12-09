@@ -189,7 +189,15 @@ DELETE http://localhost:3000/experiences/delete/2
 # Sessions Test
 ###
 
+
 ### Sessions create (login)
+POST http://localhost:3000/sessions.as_json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
 
 # User Test
 
@@ -203,3 +211,6 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+
+
