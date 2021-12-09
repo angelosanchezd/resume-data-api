@@ -186,3 +186,20 @@ Content-Type: application/json
 ###delete experience
 DELETE http://localhost:3000/experiences/delete/2
 
+# Sessions Test
+###
+
+### Sessions create (login)
+
+# User Test
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
