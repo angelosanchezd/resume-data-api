@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :authenticate_student, except: [:create, :index, :show] 
+  before_action :authenticate_student, except: [:create, :index, :show, :edit] 
   
 
   def index
