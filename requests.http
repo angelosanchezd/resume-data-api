@@ -1,0 +1,207 @@
+
+### EDUCATION REQUESTS ###
+
+### INDEX
+GET http://localhost:3000/education/1
+Content-Type: application/json
+
+
+### SHOW
+GET http://localhost:3000/education/show/1
+Content-Type: application/json
+
+### CREATE
+POST http://localhost:3000/education
+Content-Type: application/json
+
+{
+  "student_id": "1",
+  "start_date": "nov 2",
+  "end_date": "nov 3",
+  "degree": "degree",
+  "university_name": "university",
+  "details": "details"
+}
+
+### UPDATE
+PATCH http://localhost:3000/education/2
+Content-Type: application/json
+
+{
+  "student_id": "1",
+  "start_date": "nov 2",
+  "end_date": "nov 3"
+}
+
+### DELETE
+DELETE http://localhost:3000/education/1
+
+
+### CAPSTONES - INDEX
+GET http://localhost:3000/capstones/1
+Content-Type: application/json
+### CAPSTONES - SHOW
+GET http://localhost:3000/capstones/show/1
+Content-Type: application/json
+### CAPSTONES - CREATE
+POST http://localhost:3000/capstones
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjY4MDB9.LQUyw32uhvmp1RamDHgAt5B53FRtP9GAgemf_nswq4I
+
+{
+  "name": "Test",
+  "description": "Test",
+  "URL": "Test",
+  "screenshot": "Test"
+}
+
+### CAPSTONES - UPDATE
+PATCH http://localhost:3000/capstones/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjY4MDB9.LQUyw32uhvmp1RamDHgAt5B53FRtP9GAgemf_nswq4I
+
+{
+  "name": "wabbajack"
+}
+### CAPSTONES - DESTROY
+DELETE http://localhost:3000/capstones/1
+Content-Type: application/json
+
+
+### Students Index
+GET http://localhost:3000/students
+Content-Type: application/json
+
+### Students Create
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Show
+GET http://localhost:3000/students/1
+Content-Type: application/json
+
+### Students Update
+PATCH http://localhost:3000/students/1
+Content-Type: application/json
+
+{
+"first_name": "",
+"last_name": "",
+"email": "",
+"phone_number": "",
+"short_bio": "",
+"linkedin": "",
+"twitter": "",
+"website": "",
+"online_resume": "",
+"github": "",
+"photo": ""
+}
+
+### Students Destroy
+DELETE http://localhost:3000/students/1
+Content-Type: application/json
+
+
+# Skill Model Requests
+### INDEX REQUEST
+GET http://localhost:3000/skills/3.json
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjozLCJleHAiOjE2MzkxNjQ2MjF9.EfImtCVNnfUu00bZx3d3NrOwpgh0qhvyrpvkCFoK2Pk
+
+### SHOW REQUEST
+GET http://localhost:3000/skills/show/4.json
+Content-Type: application/json 
+
+### CREATE REQUEST
+POST http://localhost:3000/skills.json
+Content-Type: application/json 
+
+{
+  "student_id": 1,
+  "skill": "Driving"
+}
+
+### EDIT REQUEST
+PATCH http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+{
+  "skill": "Drifting"
+}
+
+### DESTROY REQUEST
+DELETE http://localhost:3000/skills/7.json
+Content-Type: application/json 
+
+###index experiences
+
+GET http://localhost:3000/experiences/1
+Content-Type: application/json
+
+###show experiences
+
+GET http://localhost:3000/experiences/show/1
+Content-Type: application/json
+
+###create experiences
+
+POST http://localhost:3000/experiences/create
+Content-Type: application/json
+
+{
+  "student_id": "",
+  "start_date": "",
+  "end_date": "",
+  "job_title": "",
+  "company_name": "",
+  "details": ""
+}
+
+###update experience
+
+PATCH http://localhost:3000/experiences/update/1
+Content-Type: application/json
+
+{
+  "start_date": "now",
+  "end_date": "now",
+  "job_title": "now",
+  "company_name": "now",
+  "details": "now"
+}
+
+###delete experience
+DELETE http://localhost:3000/experiences/delete/2
+
+# Sessions Test
+###
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.as_json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "1234"
+}
+
+
+
+
+
