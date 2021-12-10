@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :authenticate_student
+  # before_action :authenticate_student
 
   def index
     skills = Skill.where(student_id: current_student.id)
